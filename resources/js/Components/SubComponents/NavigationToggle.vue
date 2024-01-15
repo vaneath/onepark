@@ -1,11 +1,6 @@
 <script setup>
-import { ref } from "vue";
-import ApplicationLogo from "@/Components/ApplicationLogo.vue";
-import Dropdown from "@/Components/Dropdown.vue";
-import DropdownLink from "@/Components/DropdownLink.vue";
-import NavLink from "@/Components/NavLink.vue";
 import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
-import { Link } from "@inertiajs/vue3";
+import { ref } from "vue";
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -52,7 +47,7 @@ const showingNavigationDropdown = ref(false);
             :class="{
                 hidden: !showingNavigationDropdown,
             }"
-            class="fixed top-16 right-3 w-56"
+            class="fixed top-16 right-3 w-56 z-50"
         >
             <div class="bg-gray-700">
                 <div class="pt-2 pb-3 space-y-1">

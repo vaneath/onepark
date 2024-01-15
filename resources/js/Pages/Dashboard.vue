@@ -1,5 +1,5 @@
 <script setup>
-import Aside from "@/Components/Aside.vue";
+import Calendar from "@/Components/Calendar.vue";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
 </script>
@@ -8,6 +8,6 @@ import { Head } from "@inertiajs/vue3";
     <Head title="Dashboard" />
 
     <AuthenticatedLayout>
-        <Aside />
+        <Calendar />
     </AuthenticatedLayout>
 </template>
