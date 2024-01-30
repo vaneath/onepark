@@ -27,7 +27,7 @@ class UserFactory extends Factory
   public function definition(): array
   {
     return [
-      'id' => random_int(001, 999),
+      'user_id' => random_int(100, 999),
       'first_name' => $this->faker->firstName,
       'last_name' => $this->faker->lastName,
       'role' => random_int(1, 3),
