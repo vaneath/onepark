@@ -17,7 +17,16 @@ class DatabaseSeeder extends Seeder
   public function run(): void
   {
     Department::factory()->count(5)->create();
-    Position::factory()->count(20)->create();
-    User::factory()->count(50)->create();
+    Position::factory()->count(10)->create();
+    User::factory()->count(30)->create();
+    User::factory()->create([
+      'user_id' => 123,
+      'first_name' => 'V',
+      'last_name' => 'A',
+      'role' => 1,
+      'department_id' => Department::all()->random()->id,
+      'position_id' => Position::all()->random()->id,
+      'password' => 'password',
+    ]);
   }
 }

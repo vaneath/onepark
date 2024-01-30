@@ -1,10 +1,10 @@
 <script setup>
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
-import GuestLayout from '@/Layouts/GuestLayout.vue';
-import { Head, useForm } from '@inertiajs/vue3';
+import InputError from "@/Components/InputError.vue";
+import InputLabel from "@/Components/InputLabel.vue";
+import PrimaryButton from "@/Components/PrimaryButton.vue";
+import TextInput from "@/Components/TextInput.vue";
+import GuestLayout from "@/Layouts/GuestLayout.vue";
+import { Head, useForm } from "@inertiajs/vue3";
 
 defineProps({
     canResetPassword: {
@@ -16,14 +16,14 @@ defineProps({
 });
 
 const form = useForm({
-    id: '',
-    password: '',
+    user_id: "",
+    password: "",
     remember: false,
 });
 
 const submit = () => {
-    form.post(route('login'), {
-        onFinish: () => form.reset('password'),
+    form.post(route("login"), {
+        onFinish: () => form.reset("password"),
     });
 };
 </script>
@@ -38,16 +38,16 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="id" value="Enter your ID" />
+                <InputLabel for="user_id" value="Enter your user ID" />
 
                 <TextInput
-                    id="id"
+                    id="user_id"
                     type="number"
                     class="mt-1 block w-full"
-                    v-model="form.id"
+                    v-model="form.user_id"
                     required
                     autofocus
-                    autocomplete="id"
+                    autocomplete="user_id"
                 />
 
                 <InputError class="mt-2" :message="form.errors.id" />
@@ -69,7 +69,11 @@ const submit = () => {
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton
+                    class="ms-4"
+                    :class="{ 'opacity-25': form.processing }"
+                    :disabled="form.processing"
+                >
                     Log in
                 </PrimaryButton>
             </div>
