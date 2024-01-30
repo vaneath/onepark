@@ -3,9 +3,7 @@ import SideBarLink from "@/Components/SubComponents/SideBarLink.vue";
 </script>
 
 <template>
-    <aside
-        class="fixed transition-transform -translate-x-full sm:translate-x-0"
-    >
+    <aside class="transition-transform -translate-x-full sm:translate-x-0">
         <div class="px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <ul class="space-y-2">
                 <SideBarLink
