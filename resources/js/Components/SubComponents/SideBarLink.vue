@@ -17,8 +17,8 @@ let classes = computed(() =>
 
 <template>
     <Link
-        class="flex justify-center items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-600"
-        :class="active ? 'text-yellow-500 bg-gray-700 rounded' : ''"
+        class="flex justify-center items-center px-6 py-2 mt-4 text-white hover:text-yellow-500 hover:bg-gray-700 rounded"
+        :class="active ? 'text-yellow-500 bg-gray-700' : ''"
     >
         <i :class="classes"></i>
         <span class="mx-3">{{ props.name }}</span>
